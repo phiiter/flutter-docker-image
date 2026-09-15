@@ -22,5 +22,5 @@ RUN apt-get update \
 RUN git clone --depth 1 --branch "$FLUTTER_STABLE_VERSION" https://github.com/flutter/flutter.git "$FLUTTER_HOME" \
     && flutter config --no-analytics \
     && flutter precache --web \
-    && flutter doctor -v || true
+    && flutter doctor -v || true \
     && git config --global --add safe.directory "$FLUTTER_HOME"
